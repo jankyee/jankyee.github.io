@@ -86,12 +86,21 @@
 <!--      <img style="width: 80%;max-width: 320px" alt="profile photo" src="images/deyi.jpg">-->
       <h1>Deyi Ji</h1>
         <p class="w3-justify" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:600px">
-          I am a senior researcher at <a href="https://damo.alibaba.com/">Alibaba DAMO Academy</a> and Alibaba Cloud, 
-          where I works with Prof. <a href="https://scholar.google.com/citations?user=T9AzhwcAAAAJ">Jieping Ye</a> and Prof. <a href="https://scholar.google.com/citations?user=6G-l4o0AAAAJ">Xian-Sheng Hua</a> on deep learning and computer vision. 
+          I am a senior research scientist at <a href="https://damo.alibaba.com/">Alibaba DAMO Academy</a> and Alibaba Cloud, 
+          where I works with Prof. <a href="https://scholar.google.com/citations?user=T9AzhwcAAAAJ">Jieping Ye</a> and Prof. <a href="https://scholar.google.com/citations?user=6G-l4o0AAAAJ">Xian-Sheng Hua</a> on deep learning, computer vision and machine learning. 
+        </p>
+      
+        <p class="w3-justify" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:600px">
           I have been also studying for a Ph.D degree at <a href="https://www.ustc.edu.cn/">University of Science and Technology of China</a>, by the “Doctoral Program for Future Technology Leading Talents in National Key Fields”, 
           co-advised by Prof. <a href="https://scholar.google.com/citations?user=r6CvuOUAAAAJ">Feng Zhao</a> and Prof. <a href="https://scholar.google.com/citations?user=5bInRDEAAAAJ">Feng Wu</a>. 
-          Before that, I worked as a researcher at <a href="https://www.sensetime.com/">SenseTime</a> with Dr. <a href="https://scholar.google.com/citations?user=9RBxtd8AAAAJ">Wei Wu</a> and Dr. <a href="https://scholar.google.com/citations?user=rEYarG0AAAAJ">Junjie Yan</a>, 
+        </p>
+
+        <p class="w3-justify" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:600px">
+          Before that, I worked as a research scientist at <a href="https://www.sensetime.com/">SenseTime</a> with Dr. <a href="https://scholar.google.com/citations?user=9RBxtd8AAAAJ">Wei Wu</a> and Dr. <a href="https://scholar.google.com/citations?user=rEYarG0AAAAJ">Junjie Yan</a>, 
           in Prof. <a href="https://scholar.google.com/citations?user=-B5JgjsAAAAJ">Xiaogang Wang</a>'s team. 
+        </p>
+      
+        <p class="w3-justify" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;max-width:600px">
           I received my Master's degree of Computer Science in <a href="https://www.sjtu.edu.cn">Shanghai Jiao Tong University</a>, where I was advised by Prof. <a href="https://scholar.google.com/citations?user=GtNuBJcAAAAJ">Hongtao Lu</a>, 
           and Bachelor's degree in <a href="https://www.hust.edu.cn">Huazhong University of Science and Technology</a> co-advised by Prof. Yu Liu and Prof. <a href="https://scholar.google.com/citations?user=qNCTLV0AAAAJ">Xinggang Wang</a>.
         </p>
@@ -243,7 +252,7 @@
 
     Thanks for this website's <a href="https://github.com/YunheWang/HomePage">source code</a> <br>
 
-  No.
+<!--   No.
   <script type="text/javascript">
   var sc_project=12347113; 
   var sc_invisible=0; 
@@ -259,7 +268,7 @@
   class="statcounter" src="https://c.statcounter.com/12347113/0/21aca5d1/0/"
   alt="Web Analytics Made Easy - StatCounter"></a></div>
   </noscript>
-  <!-- End of Statcounter Code -->
+  <!-- End of Statcounter Code --> -->
 
   </div>
 
@@ -292,6 +301,40 @@ function w3_close() {
   document.getElementById("myOverlay").style.display = "none";
 }
 </script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', "");
+</script>
+
+
+<script>
+    $(document).ready(function () {
+        
+        var gsDataBaseUrl = 'https://cdn.jsdelivr.net/gh/adrianwestmoon/adrianwestmoon.github.io@'
+        
+        $.getJSON(gsDataBaseUrl + "google-scholar-stats/gs_data.json", function (data) {
+            var totalCitation = data['citedby']
+            document.getElementById('total_cit').innerHTML = totalCitation;
+            var citationEles = document.getElementsByClassName('show_paper_citations')
+            Array.prototype.forEach.call(citationEles, element => {
+                var paperId = element.getAttribute('data')
+                var numCitations = data['publications'][paperId]['num_citations']
+                element.innerHTML = '| Citations: ' + numCitations;
+            });
+        });
+    })
+</script>
+
+
+  </body>
+</html>
+
 
 </body>
 </html>
